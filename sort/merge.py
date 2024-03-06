@@ -3,7 +3,8 @@ def mergeSort(arr, l, r):
         m = (l + r) // 2
         mergeSort(arr, l, m)
         mergeSort(arr, m + 1, r)
-        return merge(arr, l, m, r)
+        merge(arr, l, m, r)
+        return arr
 
 def merge(arr, l, m, r):
     len_l_sub_arr = m - l + 1
@@ -36,3 +37,4 @@ def merge(arr, l, m, r):
 arr = [12, 11, 13, 5, 6, 7]
 n = len(arr)
 print (mergeSort(arr, 0, n - 1))
+print (arr)

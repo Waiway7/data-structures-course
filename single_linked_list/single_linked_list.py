@@ -82,7 +82,20 @@ class LinkedList:
             fast = fast.next.next
         print (slow.value)
         return slow
-    
+    def remove_duplicates(self):
+        if self.head is None: return None
+        curr_node = self.head
+        _set = set()
+        _set.add(curr_node.value)
+
+        while curr_node.next:
+            if curr_node.next.value in _set:
+                curr_node.next = curr_node.next.next
+                self.length -= 1
+            else:
+                _set.add(curr_node.next.value)
+                curr_node = curr_node.next
+        self.tail = curr_node
 new_linked_list = LinkedList()
 new_linked_list.append(10)
 new_linked_list.append(20)

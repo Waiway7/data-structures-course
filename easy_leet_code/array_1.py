@@ -50,5 +50,3 @@ print (my_array.buffer_info())
 #12 check for number of occurances of an element using count() mehtod
 print (my_array.count(5))
 #12 convert array to string using tostring() method
-a=[1,2,3,4,5]
-print(a[3:0:-1])
